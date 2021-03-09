@@ -26,7 +26,6 @@
         android:text="Simple Calculator"
         android:layout_below="@+id/appName"
         android:onClick="simpleCalcClick"
-
         />
 
     <Button
