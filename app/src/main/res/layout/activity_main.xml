@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:layout_marginTop="200dp"
+        android:id="@+id/appName"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/simpleCalcBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Simple Calculator"
+        android:layout_below="@+id/appName"
+        android:onClick="simpleCalcClick"
+
+        />
+
+    <Button
+        android:id="@+id/advancedCalcBtn"
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simpleCalcBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Advanced Calculator"
+        android:onClick="advancedCalcClick"
+        />
+
+    <Button
+        android:id="@+id/aboutBtn"
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/advancedCalcBtn"
+        android:layout_centerHorizontal="true"
+        android:text="About"
+        android:onClick="aboutCalcClick"
+        />
+
+    <Button
+        android:id="@+id/ExitBtn"
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutBtn"
+        android:layout_centerHorizontal="true"
+        android:text="Exit"
+        android:onClick="exitClick"
+        />
+
+</RelativeLayout>
