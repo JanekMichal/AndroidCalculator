@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kalkulator">
+        <activity android:name=".advanced_calc"></activity>
         <activity android:name=".SimpleCalc" />
         <activity android:name=".MenuActivity">
             <intent-filter>

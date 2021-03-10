@@ -19,7 +19,10 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void advancedCalcClick(View view) {
+        Intent intent = new Intent(getBaseContext(), advanced_calc.class);
+        startActivity(intent);
     }
 
     public void aboutCalcClick(View view) {
