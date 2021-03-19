@@ -18,7 +18,7 @@
         android:layout_marginTop="190dp"
         android:layout_marginRight="10dp"
         android:background="@color/black"
-        android:text="Hello"
+        android:text="0"
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
         android:textSize="48dp"
@@ -42,6 +42,7 @@
             style="@style/topButtonsStyle"
             android:onClick="ACClick"
             android:text="AC"
+            android:background="@drawable/roundedbutton"
 
             />
 
@@ -50,7 +51,6 @@
             style="@style/topButtonsStyle"
             android:text="+/-"
             android:onClick="changeSignClick"
-
             />
 
         <Button

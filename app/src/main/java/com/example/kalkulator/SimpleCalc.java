@@ -33,16 +33,13 @@ public class SimpleCalc extends AppCompatActivity {
 
 
     }
-    //TODO: Poprawić wpisywanie tych liczb po wykonaniu działania i naciśnięciu równa się
+
     private void numberClick(int number) {
         if (result == 0) {
             result = number;
         } else if (isOperationSelected == 0 && resultInMemory != 0) {
             result = number;
-        }
-
-
-        else {
+        } else {
             result = result * 10 + number;
         }
         resultView.setText(valueOf(result));
