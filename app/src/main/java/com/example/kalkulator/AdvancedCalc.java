@@ -335,5 +335,4 @@ public class AdvancedCalc extends AppCompatActivity {
     public void button9Click(View view) {
         numberClick("9");
     }
-
 }

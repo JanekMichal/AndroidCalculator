@@ -24,6 +24,31 @@ public class SimpleCalc extends AppCompatActivity {
     private String last_action = null;
     private boolean should_reset_result = false;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_simple_calc);
+        result_basic = findViewById(R.id.resultView);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("current_value", current_value);
+        savedInstanceState.putDouble("memory_result", (memory_result.doubleValue()));
+        savedInstanceState.putString("last_action", last_action);
+        savedInstanceState.putBoolean("should_reset_result", should_reset_result);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        current_value = savedInstanceState.getString("current_value");
+        result_basic.setText(current_value);
+        memory_result = BigDecimal.valueOf(savedInstanceState.getDouble("memory_result"));
+        last_action = savedInstanceState.getString("last_action");
+        should_reset_result = savedInstanceState.getBoolean("should_reset_result");
+    }
 
     private void countLastExpression() {
         should_reset_result = true;
@@ -87,32 +112,6 @@ public class SimpleCalc extends AppCompatActivity {
 
     private char checkLastCharacterInResult() {
         return current_value.charAt(current_value.length() - 1);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simple_calc);
-        result_basic = findViewById(R.id.resultView);
-    }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putString("current_value", current_value);
-        savedInstanceState.putDouble("memory_result", (memory_result.doubleValue()));
-        savedInstanceState.putString("last_action", last_action);
-        savedInstanceState.putBoolean("should_reset_result", should_reset_result);
-    }
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        current_value = savedInstanceState.getString("current_value");
-        result_basic.setText(current_value);
-        memory_result = BigDecimal.valueOf(savedInstanceState.getDouble("memory_result"));
-        last_action = savedInstanceState.getString("last_action");
-        should_reset_result = savedInstanceState.getBoolean("should_reset_result");
     }
 
     public void ACClick(View view) {
@@ -229,242 +228,3 @@ public class SimpleCalc extends AppCompatActivity {
         numberClick("9");
     }
 }
-
-
-//package com.example.kalkulator;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//import android.os.Bundle;
-//import android.view.View;
-//import android.widget.TextView;
-//
-//import java.math.BigDecimal;
-//import java.math.MathContext;
-//
-//import static java.lang.String.valueOf;
-//
-//public class SimpleCalc extends AppCompatActivity {
-//
-////    private TextView resultView;
-////    private float result = 0;
-////    private float resultInMemory = 0;
-////    private int operation = 0; //0 - none, 1 - add, 2 - sub, 3 - mul, 4 - div
-////    private int isOperationSelected = 0;
-////    private int shouldBeReset = 0;
-////    private int isComaSelected = 0;
-//
-//
-//
-//    private String current_value = "0";
-//    private TextView result_basic;
-//    final private int max_length = 20;
-//    private final MathContext m = new MathContext(max_length / 2);
-//    final private String error_message = "Error";
-//    private BigDecimal memory_result = new BigDecimal(0.0, m);
-//    private String last_action = null;
-//    private boolean should_reset_result = false;
-//    private boolean was_clear_clicked = false;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_simple_calc);
-//        result_basic = (TextView) findViewById(R.id.resultView);
-//        //resetResult();
-//    }
-//
-//    @Override
-//    public void onSaveInstanceState(Bundle savedInstanceState) {
-//        super.onSaveInstanceState(savedInstanceState);
-//        savedInstanceState.putString("current_value", current_value);
-//        savedInstanceState.putDouble("memory_result",(memory_result.doubleValue()));
-//        savedInstanceState.putString("last_action", last_action);
-//        savedInstanceState.putBoolean("should_reset_result", should_reset_result);
-//        savedInstanceState.putBoolean("was_clear_clicked", was_clear_clicked);
-//
-//    }
-//
-//    @Override
-//    public void onRestoreInstanceState(Bundle savedInstanceState) {
-//        super.onRestoreInstanceState(savedInstanceState);
-//        current_value = savedInstanceState.getString("current_value");
-//        result_basic.setText(current_value);
-//        memory_result = BigDecimal.valueOf(savedInstanceState.getDouble("memory_result"));
-//        last_action = savedInstanceState.getString("last_action");
-//        should_reset_result = savedInstanceState.getBoolean("should_reset_result");
-//        was_clear_clicked = savedInstanceState.getBoolean("was_clear_clicked");
-//    }
-//
-//
-//
-//
-//    public void ACClick(View view) {
-//        result = 0;
-//        resultInMemory = 0;
-//        operation = 0;
-//        resultView.setText(valueOf(result));
-//        isComaSelected = 0;
-//
-//    }
-//
-//    private void numberClick(int number) {
-//        if (shouldBeReset == 1) {
-//            shouldBeReset = 0;
-//            result = 0;
-//            resultInMemory = 0;
-//            operation = 0;
-//        }
-//        if (result == 0) {
-//            result = number;
-//        }
-////        } else if (isOperationSelected == 0 && resultInMemory != 0) {
-////            result = number;
-////        }
-//        else if (isComaSelected == 1) {
-//            result
-//        }
-//        else {
-//            result = result * 10 + number;
-//        }
-//        resultView.setText(valueOf(result));
-//    }
-//
-//    public void equalsClick(View view) {
-//        if (operation == 0) {
-//            resultInMemory = result;
-//        } else if (operation == 1) {
-//            resultInMemory += result;
-//        } else if (operation == 2) {
-//            resultInMemory -= result;
-//        } else if (operation == 3) {
-//            resultInMemory *= result;
-//        } else if (operation == 4) {
-//            resultInMemory /= result;
-//        }
-//        shouldBeReset = 1;
-//        isOperationSelected = 0;
-//
-//        resultView.setText(valueOf(resultInMemory));
-//    }
-//
-//    public void plusClick(View view) {
-//        if (shouldBeReset == 1) shouldBeReset = 0;
-//        if (result != 0 && resultInMemory != 0 && isOperationSelected == 1) {
-//            resultInMemory += result;
-//            resultView.setText(valueOf(resultInMemory));
-//        } else if (resultInMemory == 0) {
-//            resultInMemory = result;
-//        }
-//        isOperationSelected = 1;
-//        result = 0;
-//        operation = 1;
-//
-//    }
-//
-//    public void minusClick(View view) {
-//        if (shouldBeReset == 1) shouldBeReset = 0;
-//        if (result != 0 && resultInMemory != 0 && isOperationSelected == 1) {
-//            resultInMemory -= result;
-//            resultView.setText(valueOf(resultInMemory));
-//        } else if (resultInMemory == 0) {
-//            resultInMemory = result;
-//        }
-//        isOperationSelected = 1;
-//        result = 0;
-//        operation = 2;
-//    }
-//
-//    public void mulClick(View view) {
-//        if (shouldBeReset == 1) shouldBeReset = 0;
-//        if (result != 0 && resultInMemory != 0 && isOperationSelected == 1) {
-//            resultInMemory *= result;
-//            resultView.setText(valueOf(resultInMemory));
-//        } else if (resultInMemory == 0) {
-//            resultInMemory = result;
-//        }
-//        isOperationSelected = 1;
-//        result = 0;
-//        operation = 3;
-//    }
-//
-//    public void divClick(View view) {
-//        if (shouldBeReset == 1) shouldBeReset = 0;
-//        if (result != 0 && resultInMemory != 0 && isOperationSelected == 1) {
-//            resultInMemory /= result;
-//            resultView.setText(valueOf(resultInMemory));
-//        } else if (resultInMemory == 0) {
-//            resultInMemory = result;
-//        }
-//        isOperationSelected = 1;
-//        result = 0;
-//        operation = 4;
-//    }
-//
-//    public void delClick(View view) {
-//        if (resultInMemory != 0) {
-//            resultInMemory /= 10;
-//            resultView.setText(valueOf(resultInMemory));
-//        } else if (result != 0) {
-//            result *= -1;
-//            resultView.setText(valueOf(result));
-//        }
-//    }
-//
-//    public void changeSignClick(View view) {
-//        if (resultInMemory != 0) {
-//            resultInMemory *= -1;
-//            resultView.setText(valueOf(resultInMemory));
-//        } else if (result != 0) {
-//            result *= -1;
-//            resultView.setText(valueOf(result));
-//        }
-//    }
-//
-//    public void comaClick(View view) {
-//
-//    }
-//
-//    public void button0Click(View view) {
-//        numberClick(0);
-//    }
-//
-//    public void button1Click(View view) {
-//        numberClick(1);
-//    }
-//
-//    public void button2Click(View view) {
-//        numberClick(2);
-//    }
-//
-//    public void button3Click(View view) {
-//        numberClick(3);
-//    }
-//
-//    public void button4Click(View view) {
-//        numberClick(4);
-//    }
-//
-//    public void button5Click(View view) {
-//        numberClick(5);
-//    }
-//
-//    public void button6Click(View view) {
-//        numberClick(6);
-//    }
-//
-//    public void button7Click(View view) {
-//        numberClick(7);
-//    }
-//
-//    public void button8Click(View view) {
-//        numberClick(8);
-//    }
-//
-//    public void button9Click(View view) {
-//        numberClick(9);
-//    }
-//
-//
-//}
-//
