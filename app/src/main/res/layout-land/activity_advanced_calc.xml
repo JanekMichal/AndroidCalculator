@@ -1,66 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
-    tools:context=".SimpleCalc"
+
 
     >
 
-
     <TextView
-        android:id="@+id/resultView"
+        android:id="@+id/resultView_advanced"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:background="@color/black"
         android:text="0"
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
         android:textSize="48dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <GridLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/black"
-        android:columnCount="4"
-        android:rowCount="5"
+        android:columnCount="7"
+        android:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultView"
+        app:layout_constraintTop_toBottomOf="@+id/resultView_advanced"
 
         >
 
         <Button
-            android:id="@+id/ACbutton"
-            style="@style/topButtonsStyle"
-            android:onClick="ACClick"
-            android:text="AC"
-
-
-            />
-
-        <Button
-            android:id="@+id/changeSingButton"
-            style="@style/topButtonsStyle"
-            android:onClick="changeSignClick"
-            android:text="+/-" />
-
-        <Button
-            android:id="@+id/percentButton"
-            style="@style/topButtonsStyle"
-            android:onClick="delClick"
-            android:text="DEL"
+            android:id="@+id/sinButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="sinClick"
+            android:text="sin"
 
             />
 
         <Button
-            android:id="@+id/divButton"
+            android:id="@+id/sqrtButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="sqrtClick"
+            android:text="sqrt"
+
+            />
+
+        <Button
+            android:id="@+id/divButton_advanced"
             style="@style/actionButtonsStyle"
             android:onClick="divClick"
             android:text="/"
@@ -68,7 +62,7 @@
             />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/button7_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button7Click"
             android:text="7"
@@ -76,13 +70,13 @@
             />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/button8_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button8Click"
             android:text="8" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/button9_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button9Click"
             android:text="9"
@@ -90,7 +84,31 @@
             />
 
         <Button
-            android:id="@+id/mulButton"
+            android:id="@+id/ACbutton_advanced"
+            style="@style/topButtonsStyle"
+            android:onClick="ACClick"
+            android:text="AC"
+
+            />
+
+        <Button
+            android:id="@+id/cosButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="percentClick"
+            android:text="%"
+
+            />
+
+        <Button
+            android:id="@+id/x2Button_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="x2Click"
+            android:text="x^2"
+
+            />
+
+        <Button
+            android:id="@+id/mulButton_advanced"
             style="@style/actionButtonsStyle"
             android:onClick="mulClick"
             android:text="x"
@@ -98,7 +116,7 @@
             />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button4_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button4Click"
             android:text="4"
@@ -106,7 +124,7 @@
             />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/button5_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button5Click"
             android:text="5"
@@ -114,7 +132,7 @@
             />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/button6_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button6Click"
             android:text="6"
@@ -122,7 +140,31 @@
             />
 
         <Button
-            android:id="@+id/minusButton"
+            android:id="@+id/percentButton_advanced"
+            style="@style/topButtonsStyle"
+            android:onClick="delClick"
+            android:text="DEL"
+
+            />
+
+        <Button
+            android:id="@+id/tanButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="tanClick"
+            android:text="tan"
+
+            />
+
+        <Button
+            android:id="@+id/xyButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="xyClick"
+            android:text="x^y"
+
+            />
+
+        <Button
+            android:id="@+id/minusButton_advanced"
             style="@style/actionButtonsStyle"
             android:onClick="minusClick"
             android:text="-"
@@ -130,7 +172,7 @@
             />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button1_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button1Click"
             android:text="1"
@@ -138,7 +180,7 @@
             />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button2_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button2Click"
             android:text="2"
@@ -146,7 +188,7 @@
             />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button3_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="button3Click"
             android:text="3"
@@ -154,7 +196,33 @@
             />
 
         <Button
-            android:id="@+id/plusButton"
+            android:id="@+id/changeSingButton_advanced"
+            style="@style/topButtonsStyle"
+            android:onClick="changeSignClick"
+            android:text="+/-"
+
+            />
+
+        <Button
+            android:id="@+id/lnButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="lnClick"
+            android:text="ln"
+
+            />
+
+
+        <Button
+            android:id="@+id/logButton_advanced"
+            style="@style/advancedButtonsStyle"
+            android:onClick="logClick"
+            android:text="log"
+
+            />
+
+
+        <Button
+            android:id="@+id/plusButton_advanced"
             style="@style/actionButtonsStyle"
             android:onClick="plusClick"
             android:text="+"
@@ -162,7 +230,7 @@
             />
 
         <Button
-            android:id="@+id/button0"
+            android:id="@+id/button0_advanced"
             style="@style/numberButtonsStyle"
             android:layout_columnSpan="2"
             android:onClick="button0Click"
@@ -171,7 +239,7 @@
             />
 
         <Button
-            android:id="@+id/comaButton"
+            android:id="@+id/comaButton_advanced"
             style="@style/numberButtonsStyle"
             android:onClick="comaClick"
             android:text=","
@@ -179,7 +247,7 @@
             />
 
         <Button
-            android:id="@+id/equalsButton"
+            android:id="@+id/equalsButton_advanced"
             style="@style/actionButtonsStyle"
             android:onClick="equalsClick"
             android:text="="
@@ -187,5 +255,6 @@
             />
 
     </GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

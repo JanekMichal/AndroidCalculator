@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Style.Kalkulator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Kalkulator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
+        android:theme="@android:style/"
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -15,15 +16,24 @@
     </style>
 
     <style name="numberButtonsStyle">
-
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">28sp</item>
         <item name="android:layout_gravity">fill</item>
         <item name="android:layout_columnWeight">1</item>
         <item name="android:layout_rowWeight">1</item>
-        <item name="android:shape">oval</item>
         <item name="backgroundTint">#565264</item>
         <item name="android:layout_margin">4dp</item>
+
+    </style>
+
+    <style name="numberButtonsStyleTablet">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="backgroundTint">#565264</item>
+        <item name="android:layout_margin">16dp</item>
 
     </style>
 
@@ -34,9 +44,20 @@
         <item name="android:layout_gravity">fill</item>
         <item name="android:layout_columnWeight">1</item>
         <item name="android:layout_rowWeight">1</item>
-        <item name="android:shape">oval</item>
         <item name="backgroundTint">#2b2d42</item>
         <item name="android:layout_margin">4dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="advancedButtonsStyleTablet">
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="backgroundTint">#2b2d42</item>
+        <item name="android:layout_margin">16dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
@@ -50,6 +71,17 @@
         <item name="android:layout_margin">4dp</item>
     </style>
 
+    <style name="topButtonsStyleTablet">
+        <item name="android:backgroundTint">@color/light_gray</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+
     <style name="actionButtonsStyle">
         <item name="android:backgroundTint">@color/orange</item>
         <item name="android:textSize">28sp</item>
@@ -57,6 +89,17 @@
         <item name="android:layout_columnWeight">1</item>
         <item name="android:layout_rowWeight">1</item>
         <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="actionButtonsStyleTablet">
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_margin">16dp</item>
         <item name="android:textColor">@color/white</item>
 
     </style>

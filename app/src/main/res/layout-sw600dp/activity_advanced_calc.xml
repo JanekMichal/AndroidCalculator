@@ -5,22 +5,25 @@
     android:layout_height="match_parent"
     android:background="@color/black"
 
+
     >
 
     <TextView
         android:id="@+id/resultView_advanced"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
         android:layout_marginRight="10dp"
         android:background="@color/black"
         android:text="0"
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
-        android:textSize="48dp"
+        android:textSize="180dp"
         app:layout_constraintTop_toTopOf="parent"
 
         />
+
+
 
     <GridLayout
         android:layout_width="0dp"
@@ -37,7 +40,7 @@
 
         <Button
             android:id="@+id/sinButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="sinClick"
             android:text="sin"
 
@@ -45,7 +48,7 @@
 
         <Button
             android:id="@+id/cosButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="percentClick"
             android:text="%"
 
@@ -53,7 +56,7 @@
 
         <Button
             android:id="@+id/tanButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="tanClick"
             android:text="tan"
 
@@ -61,7 +64,7 @@
 
         <Button
             android:id="@+id/lnButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="lnClick"
             android:text="ln"
 
@@ -69,7 +72,7 @@
 
         <Button
             android:id="@+id/sqrtButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="sqrtClick"
             android:text="sqrt"
 
@@ -77,7 +80,7 @@
 
         <Button
             android:id="@+id/x2Button_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="x2Click"
             android:text="x^2"
 
@@ -85,7 +88,7 @@
 
         <Button
             android:id="@+id/xyButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="xyClick"
             android:text="x^y"
 
@@ -93,7 +96,7 @@
 
         <Button
             android:id="@+id/logButton_advanced"
-            style="@style/advancedButtonsStyle"
+            style="@style/advancedButtonsStyleTablet"
             android:onClick="logClick"
             android:text="log"
 
@@ -101,7 +104,7 @@
 
         <Button
             android:id="@+id/ACbutton_advanced"
-            style="@style/topButtonsStyle"
+            style="@style/topButtonsStyleTablet"
             android:onClick="ACClick"
             android:text="AC"
 
@@ -109,7 +112,7 @@
 
         <Button
             android:id="@+id/changeSingButton_advanced"
-            style="@style/topButtonsStyle"
+            style="@style/topButtonsStyleTablet"
             android:onClick="changeSignClick"
             android:text="+/-"
 
@@ -117,7 +120,7 @@
 
         <Button
             android:id="@+id/percentButton_advanced"
-            style="@style/topButtonsStyle"
+            style="@style/topButtonsStyleTablet"
             android:onClick="delClick"
             android:text="DEL"
 
@@ -125,7 +128,7 @@
 
         <Button
             android:id="@+id/divButton_advanced"
-            style="@style/actionButtonsStyle"
+            style="@style/actionButtonsStyleTablet"
             android:onClick="divClick"
             android:text="/"
 
@@ -133,7 +136,7 @@
 
         <Button
             android:id="@+id/button7_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button7Click"
             android:text="7"
 
@@ -141,13 +144,13 @@
 
         <Button
             android:id="@+id/button8_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button8Click"
             android:text="8" />
 
         <Button
             android:id="@+id/button9_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button9Click"
             android:text="9"
 
@@ -155,7 +158,7 @@
 
         <Button
             android:id="@+id/mulButton_advanced"
-            style="@style/actionButtonsStyle"
+            style="@style/actionButtonsStyleTablet"
             android:onClick="mulClick"
             android:text="x"
 
@@ -163,7 +166,7 @@
 
         <Button
             android:id="@+id/button4_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button4Click"
             android:text="4"
 
@@ -171,7 +174,7 @@
 
         <Button
             android:id="@+id/button5_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button5Click"
             android:text="5"
 
@@ -179,7 +182,7 @@
 
         <Button
             android:id="@+id/button6_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button6Click"
             android:text="6"
 
@@ -187,7 +190,7 @@
 
         <Button
             android:id="@+id/minusButton_advanced"
-            style="@style/actionButtonsStyle"
+            style="@style/actionButtonsStyleTablet"
             android:onClick="minusClick"
             android:text="-"
 
@@ -195,7 +198,7 @@
 
         <Button
             android:id="@+id/button1_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button1Click"
             android:text="1"
 
@@ -203,7 +206,7 @@
 
         <Button
             android:id="@+id/button2_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button2Click"
             android:text="2"
 
@@ -211,7 +214,7 @@
 
         <Button
             android:id="@+id/button3_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="button3Click"
             android:text="3"
 
@@ -219,7 +222,7 @@
 
         <Button
             android:id="@+id/plusButton_advanced"
-            style="@style/actionButtonsStyle"
+            style="@style/actionButtonsStyleTablet"
             android:onClick="plusClick"
             android:text="+"
 
@@ -227,7 +230,7 @@
 
         <Button
             android:id="@+id/button0_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:layout_columnSpan="2"
             android:onClick="button0Click"
             android:text="0"
@@ -236,7 +239,7 @@
 
         <Button
             android:id="@+id/comaButton_advanced"
-            style="@style/numberButtonsStyle"
+            style="@style/numberButtonsStyleTablet"
             android:onClick="comaClick"
             android:text=","
 
@@ -244,7 +247,7 @@
 
         <Button
             android:id="@+id/equalsButton_advanced"
-            style="@style/actionButtonsStyle"
+            style="@style/actionButtonsStyleTablet"
             android:onClick="equalsClick"
             android:text="="
 

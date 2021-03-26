@@ -20,13 +20,17 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void advancedCalcClick(View view) {
-        Intent intent = new Intent(getBaseContext(), advanced_calc.class);
+        Intent intent = new Intent(getBaseContext(), AdvancedCalc.class);
         startActivity(intent);
     }
 
     public void aboutCalcClick(View view) {
+        Intent intent = new Intent(getBaseContext(), AboutActivity.class);
+        startActivity(intent);
     }
 
     public void exitClick(View view) {
+        finish();
+        System.exit(0);
     }
 }

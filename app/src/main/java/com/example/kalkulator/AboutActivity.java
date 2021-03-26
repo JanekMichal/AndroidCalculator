@@ -1,16 +1,14 @@
 package com.example.kalkulator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class advanced_calc extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advanced_calc);
+        setContentView(R.layout.activity_about);
     }
-
-
 }
